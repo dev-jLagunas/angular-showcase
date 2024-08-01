@@ -5,7 +5,6 @@ import { HomeCategoriesComponent } from './home-categories/home-categories.compo
 
 interface Category {
   name: string;
-  icon: string;
   description: string;
 }
 
@@ -20,7 +19,6 @@ export class HomeMainComponent {
   categories: Category[] = [
     {
       name: 'Components',
-      icon: 'component icon goes here',
       description: 'here you can find the following things.',
     },
   ];
