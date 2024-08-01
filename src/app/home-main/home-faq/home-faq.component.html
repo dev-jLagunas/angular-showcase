@@ -11,7 +11,10 @@
       [attr.aria-expanded]="accordionItem.expanded"
       [attr.aria-controls]="'accordion-body-' + $index"
     >
-      <div class="mb-1 flex justify-between" (click)="accordionItem.toggle()">
+      <div
+        class="mb-1 flex justify-between pr-2"
+        (click)="accordionItem.toggle()"
+      >
         {{ item.question }}
         <span class="">
           <i

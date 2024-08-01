@@ -1,8 +1,9 @@
-<div class="w-90vw mx-auto">
+<div class="w-90vw mx-auto md:w-full">
   <h2 class="text-3xl font-bold my-4 w-max">CATEGORIES</h2>
   @for (category of categories; track $index) {
   <article
-    class="border-l-4 rounded-l-sm border-l-red-500 flex justify-between items-center px-2"
+    class="border-l-4 rounded-l-sm flex justify-between items-center px-2 mb-4"
+    [ngClass]="category.borderColor"
   >
     <div class="w-full">
       <h3 class="font-semibold underline underline-offset-2">
@@ -12,7 +13,7 @@
         {{ category.description }}
       </p>
     </div>
-    <button class="bg-red-500 text-white p-1 rounded-sm">
+    <button class="text-red-500 p-1 rounded-sm">
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
   </article>
