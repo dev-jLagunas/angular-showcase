@@ -1,1 +1,38 @@
-<p>home-faq works!</p>
+<div class="text-sm w-90vw mx-auto md:w-full">
+  <h2 class="text-3xl font-bold my-2 w-max">F.A.Q</h2>
+  <cdk-accordion class="block">
+    @for (item of items; track $index) {
+    <cdk-accordion-item
+      #accordionItem="cdkAccordionItem"
+      class="mb-2 block"
+      role="button"
+      tabindex="0"
+      [attr.id]="'accordion-header-' + $index"
+      [attr.aria-expanded]="accordionItem.expanded"
+      [attr.aria-controls]="'accordion-body-' + $index"
+    >
+      <div class="mb-1 flex justify-between" (click)="accordionItem.toggle()">
+        {{ item.question }}
+        <span class="">
+          <i
+            class="fas"
+            [ngClass]="{
+              'fa-chevron-right': accordionItem.expanded,
+              'fa-chevron-down': !accordionItem.expanded
+            }"
+          ></i>
+        </span>
+      </div>
+      <div
+        class="py-1 border-b-2"
+        role="region"
+        [style.display]="accordionItem.expanded ? '' : 'none'"
+        [attr.id]="'accordion-body-' + $index"
+        [attr.aria-labelledby]="'accordion-header-' + $index"
+      >
+        {{ item.answer }}
+      </div>
+    </cdk-accordion-item>
+    }
+  </cdk-accordion>
+</div>
