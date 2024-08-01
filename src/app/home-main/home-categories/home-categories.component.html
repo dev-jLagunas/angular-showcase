@@ -6,14 +6,20 @@
     [ngClass]="category.borderColor"
   >
     <div class="w-full">
-      <h3 class="font-semibold underline underline-offset-2">
+      <h3
+        class="font-semibold underline underline-offset-2 hover:cursor-pointer"
+        (click)="navigateToCategory(category)"
+      >
         {{ category.name }}
       </h3>
       <p class="text-slate-800 text-sm">
         {{ category.description }}
       </p>
     </div>
-    <button class="text-red-500 p-1 rounded-sm">
+    <button
+      class="text-red-500 p-1 rounded-sm"
+      (click)="navigateToCategory(category)"
+    >
       <i class="fa-solid fa-magnifying-glass text-xl"></i>
     </button>
   </article>

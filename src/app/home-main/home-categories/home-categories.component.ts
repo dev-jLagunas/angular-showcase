@@ -1,7 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface Category {
+  id: string;
   name: string;
   description: string;
   borderColor: string;
@@ -16,4 +18,11 @@ interface Category {
 })
 export class HomeCategoriesComponent {
   @Input({ required: true }) categories: Category[] = [];
+
+  constructor(private router: Router) {}
+
+  navigateToCategory(category: Category) {
+    const path = category.name.toLowerCase().replace(/ /g, '-');
+    this.router.navigate([`${path}/${category.id}`]);
+  }
 }

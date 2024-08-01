@@ -10,7 +10,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Home',
   },
   {
-    path: 'components',
+    path: 'components/:id',
     loadComponent: () =>
       import(
         './concepts-main/angular-components/angular-components.component'
@@ -18,7 +18,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Components',
   },
   {
-    path: 'directives',
+    path: 'directives/:id',
     loadComponent: () =>
       import(
         './concepts-main/angular-directives/angular-directives.component'
@@ -26,7 +26,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Directives',
   },
   {
-    path: 'forms',
+    path: 'forms/:id',
     loadComponent: () =>
       import('./concepts-main/angular-forms/angular-forms.component').then(
         (m) => m.AngularFormsComponent
@@ -34,7 +34,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Forms',
   },
   {
-    path: 'routing',
+    path: 'routing/:id',
     loadComponent: () =>
       import('./concepts-main/angular-routing/angular-routing.component').then(
         (m) => m.AngularRoutingComponent
@@ -42,7 +42,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Routing',
   },
   {
-    path: 'signals',
+    path: 'signals/:id',
     loadComponent: () =>
       import('./concepts-main/angular-signals/angular-signals.component').then(
         (m) => m.AngularSignalsComponent
@@ -50,7 +50,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Signal',
   },
   {
-    path: 'dependency-injection',
+    path: 'dependency-injection/:id',
     loadComponent: () =>
       import(
         './concepts-main/dependency-injection/dependency-injection.component'
@@ -58,7 +58,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Dependency',
   },
   {
-    path: 'http',
+    path: 'http-client/:id',
     loadComponent: () =>
       import('./concepts-main/http-client/http-client.component').then(
         (m) => m.HttpClientComponent
@@ -66,7 +66,7 @@ export const routes: Routes = [
     title: 'Angular Showcase - Http',
   },
   {
-    path: 'template-syntax',
+    path: 'template-syntax/:id',
     loadComponent: () =>
       import('./concepts-main/template-syntax/template-syntax.component').then(
         (m) => m.TemplateSyntaxComponent
