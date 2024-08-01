@@ -17,6 +17,7 @@
     >
       <h3
         class="font-semibold underline underline-offset-2 hover:cursor-pointer"
+        (click)="navigateToSubcategory(subcategory)"
       >
         {{ subcategory.name }}
       </h3>
@@ -24,4 +25,7 @@
     </article>
     }
   </div>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
 </section>

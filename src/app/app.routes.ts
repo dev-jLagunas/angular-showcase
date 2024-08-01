@@ -18,6 +18,38 @@ export const routes: Routes = [
     title: 'Angular Showcase - Components',
   },
   {
+    path: 'components/:id/component-essentials',
+    loadComponent: () =>
+      import(
+        './concepts-main/angular-components/component-essentials/component-essentials.component'
+      ).then((m) => m.ComponentEssentialsComponent),
+    title: 'Component Essentials',
+  },
+  {
+    path: 'components/:id/component-communication',
+    loadComponent: () =>
+      import(
+        './concepts-main/angular-components/component-communication/component-communication.component'
+      ).then((m) => m.ComponentCommunicationComponent),
+    title: 'Component Communication',
+  },
+  {
+    path: 'components/:id/content-projection',
+    loadComponent: () =>
+      import(
+        './concepts-main/angular-components/content-projection/content-projection.component'
+      ).then((m) => m.ContentProjectionComponent),
+    title: 'Content Projection',
+  },
+  {
+    path: 'components/:id/lifecycle-hooks',
+    loadComponent: () =>
+      import(
+        './concepts-main/angular-components/lifecycle-hooks/lifecycle-hooks.component'
+      ).then((m) => m.LifecycleHooksComponent),
+    title: 'Lifecycle Hooks',
+  },
+  {
     path: 'directives/:id',
     loadComponent: () =>
       import(
