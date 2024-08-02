@@ -1,0 +1,108 @@
+<div>
+  <header>
+    <h4 class="custom-question-style">
+      1. How can I pass data from PARENT component to CHILD component?
+    </h4>
+    <p class="text-sm">
+      All right let's get into some actual code. Passing data from one component
+      to another is extremely important. We will start with parent to child
+      communication. Remember a child component means its selector is inside of
+      the parents template.
+    </p>
+    <p class="text-sm text-slate-800 mt-2">
+      <span class="">Quick Note:</span> I am using inline templates because its
+      easier to show the examples but for larger more complex projects Angular
+      recommends seperating the view and styles
+    </p>
+  </header>
+  <article class="mt-4">
+    <h5 class="font-semibold">
+      We actually have 2 different ways to handle such input:
+    </h5>
+    <p class="text-sm text-slate-800 indent-4">
+      We can use the
+      <span class="italic border-b border-orange-500">Input decorator </span>or
+      the
+      <span class="italic border-b border-b-blue-400">input function</span>
+    </p>
+  </article>
+  <article class="mt-4">
+    <h4 class="custom-question-style">2. &#64;Input decorator</h4>
+    <section>
+      <p class="text-sm text-slate-800">
+        To do this we need to work with the parent and child component class and
+        their respective templates. The steps themselves are not very complex
+        but as a beginner I really struggled with this. Let's look at the steps.
+      </p>
+      <ul class="indent-4 mt-2 flex flex-col gap-2 text-sm">
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Class-</span> import
+          the Input decorator from angular core.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Class-</span> create a
+          class property/member 'decorated' with the Input. This is where our
+          data will be stored. In other words, this is the property that we will
+          eventually be able to display in our template.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Template-</span> add
+          the class property to your template with text interpolation. The
+          double curly braces syntax. Which will be covered later.
+        </li>
+        <li><app-code-block [code]="codeChildInput"></app-code-block></li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Parent Component Class-</span> import
+          the child component into the parents class
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Parent Component Class-</span> create
+          another class property/member that will hold the value we want to pass
+          down to our child.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Parent Component Template-</span> add
+          the child component selector to parents template then use the class
+          property you created in the child to then bind it to the property you
+          just created inside your parent.
+        </li>
+        <li><app-code-block [code]="codeParentInput"></app-code-block></li>
+        <li>
+          And that is it! Not too bad right? Actually, its rather
+          straightforward but when I first started learning Angular I could not
+          seem to grasp this. I hope it helps others that felt the same way.
+        </li>
+      </ul>
+    </section>
+  </article>
+  <article class="mt-2">
+    <h4 class="custom-question-style">3. The input function</h4>
+    <p class="text-sm text-slate-800">
+      This new approach is based on signals. Signals will be discussed in detail
+      later. For now, lets just see the small differences in how to use it.
+    </p>
+    <ul class="text-sm text-slate-800 mt-2 flex flex-col gap-2">
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Differences: </span>there are
+        differences in how we define the import, how we define the class member,
+        and how we use the value in the template.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Explanation: </span>as you can see below
+        we use lowercase input instead of Input. We use the input function
+        instead of the decorator. Finally, we since the value is a signal we
+        call it with parentheses inside of the template. Otherwise, all the
+        other steps are the same.
+      </li>
+      <li><app-code-block [code]="codeInputSignal"></app-code-block></li>
+    </ul>
+  </article>
+</div>

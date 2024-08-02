@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CodeBlockComponent } from '../../../shared/code-block/code-block.component';
+import { AcceptingInputComponent } from './accepting-input/accepting-input.component';
 
 @Component({
   selector: 'app-component-communication',
   standalone: true,
-  imports: [CodeBlockComponent],
+  imports: [AcceptingInputComponent],
   templateUrl: './component-communication.component.html',
   styleUrl: './component-communication.component.scss',
 })
