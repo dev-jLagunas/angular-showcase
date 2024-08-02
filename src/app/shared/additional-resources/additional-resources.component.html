@@ -1,0 +1,17 @@
+<div class="mt-4">
+  <h3 class="font-semibold underline underline-offset-2 mb-2">
+    Additional Resources
+  </h3>
+  @for (resource of resources; track $index) {
+  <article class="text-sm text-slate-800 flex flex-col">
+    <a
+      [href]="resource.link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-blue-600"
+      >{{ resource.title }}</a
+    >
+    <p class="mb-2">{{ resource.description }}</p>
+  </article>
+  }
+</div>

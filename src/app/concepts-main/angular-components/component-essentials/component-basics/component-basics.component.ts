@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CodeBlockComponent } from '../../../../shared/code-block/code-block.component';
+import { AdditionalResourcesComponent } from '../../../../shared/additional-resources/additional-resources.component';
+import { Resource } from '../../../../interfaces/subcategory';
 
 @Component({
   selector: 'app-component-basics',
   standalone: true,
-  imports: [CodeBlockComponent],
+  imports: [CodeBlockComponent, AdditionalResourcesComponent],
   templateUrl: './component-basics.component.html',
   styleUrl: './component-basics.component.scss',
 })
@@ -32,4 +34,18 @@ export class ComponentBasicsComponent {
     })
   export class MyComponent {}
 `;
+
+  resources: Resource[] = [
+    {
+      title: 'Angular Documentation',
+      description:
+        'For more information on Angular components, visit the official Angular documentation.',
+      link: 'https://angular.io/guide/component-overview',
+    },
+    {
+      title: 'Freecode Camp',
+      description: 'Learn more about Angular directives here.',
+      link: 'https://angular.io/guide/attribute-directives',
+    },
+  ];
 }
