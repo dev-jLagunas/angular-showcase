@@ -1,5 +1,5 @@
 <article>
-  <h3 class="font-semibold underline underline-offset-2 mb-2">
+  <h3 class="custom-question-style mb-2">
     1. How do we actually use/display our components?
   </h3>
   <p class="text-sm">
@@ -8,4 +8,38 @@
     the solution on how to use the component.
   </p>
   <app-code-block [code]="codeSelector"></app-code-block>
+</article>
+<article>
+  <p class="text-sm">
+    Below we can see that we are working with a new
+    <span class="font-semibold">component.</span>
+    <span class="italic"> MyComponentB</span> will now be the
+    <span class="font-semibold">parent </span>of the above component so we are
+    able to use the aforementioned selector as a custom HTML tag within our
+    parents template. Of course, this also means that
+    <span class="italic">MyComponentA</span> will be a so called
+    <span class="font-semibold">child</span> component.
+  </p>
+  <app-code-block [code]="codeParent"></app-code-block>
+</article>
+<article>
+  <h3 class="custom-question-style">2. Do I need to import the components?</h3>
+  <p class="text-sm">
+    Yes, you must import your components in order to have access to them. In
+    this case, we are working with
+    <span class="font-semibold">standalone</span> components. This means we
+    directly import other components, directives, or pipes that we plan on
+    using. You can see an example of this below.
+  </p>
+  <app-code-block [code]="codeImport"></app-code-block>
+  <p class="text-sm">
+    Please note that <span class="font-semibold">standalone</span> components
+    are the recommended way to work with Angular for new development. The method
+    used before this worked with
+    <span class="font-semibold text-blue-600"
+      ><a href="https://angular.dev/guide/ngmodules">NgModule</a></span
+    >
+    as the mechanism to work with components. Please see the link for more
+    information on that as that will NOT be covered.
+  </p>
 </article>

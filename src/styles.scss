@@ -22,3 +22,10 @@ Global Styles
 body {
   font-family: "Montserrat";
 }
+
+/******************************************************************
+Tailwind Custom Utility Classes
+******************************************************************/
+.custom-question-style {
+  @apply font-bold underline underline-offset-2;
+}
