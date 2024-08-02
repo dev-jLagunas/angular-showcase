@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { HighlightAuto } from 'ngx-highlightjs';
 import { Highlight } from 'ngx-highlightjs';
-import 'highlight.js/styles/androidstudio.min.css';
 
 @Component({
   selector: 'app-code-block',
