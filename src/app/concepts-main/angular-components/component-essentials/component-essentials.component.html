@@ -1,4 +1,49 @@
-<div>
-  <p>Component Essentials here</p>
-  <p>data will go here</p>
+<div class="w-90vw mx-auto">
+  <header>
+    <img
+      src="assets/angular-svgrepo-com.svg"
+      alt="angular-logo"
+      class="h-28 mx-auto"
+    />
+    <h2 class="text-3xl text-center font-bold mb-4">Components Essentials</h2>
+  </header>
+  <article>
+    <h3 class="font-semibold underline underline-offset-2">
+      1. What are components?
+    </h3>
+    <p class="text-slate-800 text-sm">
+      Components are like the individual lego blocks we use to create full
+      applications in Angular. This means we can build a tree of components
+      which add up to create easily maintained and scalable apps.
+    </p>
+  </article>
+  <article>
+    <h3 class="font-semibold underline underline-offset-2 mb-2">
+      2. How are components defined?
+    </h3>
+    <ul class="text-slate-800 text-sm flex flex-col gap-2">
+      <li>Components must have the following:</li>
+      <li class="indent-4">
+        <i class="fa-solid fa-circle-check pr-2"></i>A &commat;Component
+        decorator with meta data and configuration
+      </li>
+      <li class="indent-4">
+        <i class="fa-solid fa-circle-check pr-2"></i>The HTML template for our
+        user interface. This maybe inline or a link to separate
+      </li>
+      <li class="indent-4">
+        <i class="fa-solid fa-circle-check pr-2"></i>A CSS selector that will
+        represent our actual component
+      </li>
+      <li class="indent-4">
+        <i class="fa-solid fa-circle-check pr-2"></i>The Typescript class with
+        our behaviors, state, input, and data
+      </li>
+      <li>
+        Other important metada are our styles property and a standalone property
+        (which is now recommended by the Angular team)
+      </li>
+    </ul>
+    <app-code-block [code]="codeSnippet"></app-code-block>
+  </article>
 </div>
