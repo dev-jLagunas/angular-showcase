@@ -1,0 +1,2 @@
+import{b as d}from"./chunk-MZVAG55R.js";import{Aa as i,Pa as r,V as s,Va as c,Wa as n,Xa as h,ab as l,eb as a}from"./chunk-E6IX27NE.js";var y=(()=>{let e=class e{constructor(){this.code=""}};e.\u0275fac=function(t){return new(t||e)},e.\u0275cmp=s({type:e,selectors:[["app-code-block"]],inputs:{code:"code"},standalone:!0,features:[a],decls:4,vars:1,consts:[[3,"highlightAuto"]],template:function(t,j){t&1&&(c(0,"pre"),l(1,"    "),h(2,"code",0),l(3,`
+`),n()),t&2&&(i(2),r("highlightAuto",j.code))},dependencies:[d]});let o=e;return o})();export{y as a};
