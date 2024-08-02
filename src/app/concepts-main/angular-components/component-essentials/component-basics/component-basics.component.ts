@@ -34,18 +34,4 @@ export class ComponentBasicsComponent {
     })
   export class MyComponent {}
 `;
-
-  resources: Resource[] = [
-    {
-      title: 'Angular Documentation',
-      description:
-        'For more information on Angular components, visit the official Angular documentation.',
-      link: 'https://angular.io/guide/component-overview',
-    },
-    {
-      title: 'Freecode Camp',
-      description: 'Learn more about Angular directives here.',
-      link: 'https://angular.io/guide/attribute-directives',
-    },
-  ];
 }

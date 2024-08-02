@@ -27,5 +27,5 @@ body {
 Tailwind Custom Utility Classes
 ******************************************************************/
 .custom-question-style {
-  @apply font-bold underline underline-offset-2;
+  @apply font-bold underline underline-offset-2 mb-2;
 }
