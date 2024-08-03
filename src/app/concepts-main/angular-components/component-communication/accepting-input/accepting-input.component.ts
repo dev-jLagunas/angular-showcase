@@ -54,4 +54,34 @@ export class AcceptingInputComponent {
       messageFromParent = input('friend');
     }
   `;
+
+  codeInputRequired: string = `
+    @Component({...})
+    export class MyComponent {
+      @Input({required: true}) value = 0;
+    }
+  `;
+
+  codeInputTransform: string = `
+    @Component({
+      selector: 'number-display',
+      template: '<p>{{ displayValue }}</p>'
+    })
+    export class NumberDisplay {
+      @Input({transform: toNumber}) value: number = 0;
+      get displayValue() {
+      return this.value;
+    }
+  }
+  `;
+
+  codeInputAlias: string = `
+    @Component({...})
+    export class MyComponent {
+      @Input({alias: 'coolComponent'}) someValue = 0;
+    }
+
+    // In PARENT template
+    <my-component [coolComponent]="50" />
+  `;
 }

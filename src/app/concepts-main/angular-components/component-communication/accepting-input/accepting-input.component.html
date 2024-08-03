@@ -105,4 +105,54 @@
       <li><app-code-block [code]="codeInputSignal"></app-code-block></li>
     </ul>
   </article>
+  <article>
+    <h4 class="custom-question-style">
+      4. What else do I need to know about input communication?
+    </h4>
+    <p class="text-sm text-slate-800">
+      There are a few more interesting thing to know about using passing data
+      with the input decorator/function. Let's look at some of them.
+    </p>
+
+    <ul class="text-sm text-slate-800 mt-2 flex flex-col gap-2">
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Required inputs: </span> using a config
+        object you can set the input to be mandatory. This means an error will
+        be reported at run time.
+      </li>
+      <li><app-code-block [code]="codeInputRequired"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Input transformations: </span> allow you
+        to specify a function to modify the value of an input. This can help
+        with ensuring the input adheres to a specific format or type. These
+        functions must be pure and statically analyzable at build time. The
+        example below takes a number input property but the parent may provide
+        it as a string so we use the transform function to make sure the value
+        is always a number. Angular actually provides to built-in transform
+        functions for coercing values to boolean and numbers.
+      </li>
+      <li><app-code-block [code]="codeInputTransform"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Input aliases: </span>allow us to rename
+        an input property for use in templates by specifying an alias option in
+        the decorator. While Angular generally recommends avoiding using
+        aliases, they can come in handy in certain scenearios such as renaming
+        properties or avoiding naming conflicts. the page.
+      </li>
+      <li><app-code-block [code]="codeInputAlias"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Input with getters and setters: </span>
+        you may define an input property with a getter or setter to control how
+        the value is accessed. This allows you to add additional logic when the
+        value is set or retrieved. However, according to the documentation these
+        are generally not recommended because of performance issues. Instead
+        Angular suggests using input transforms instead. I won't show an example
+        of this but I will link to it on the bottom.
+      </li>
+    </ul>
+  </article>
 </div>
