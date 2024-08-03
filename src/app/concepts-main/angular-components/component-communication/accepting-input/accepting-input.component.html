@@ -3,13 +3,13 @@
     <h4 class="custom-question-style">
       1. How can I pass data from PARENT component to CHILD component?
     </h4>
-    <p class="text-sm">
+    <p class="custom-text-style">
       All right let's get into some actual code. Passing data from one component
       to another is extremely important. We will start with parent to child
       communication. Remember a child component means its selector is inside of
       the parents template.
     </p>
-    <p class="text-sm text-slate-800 mt-2">
+    <p class="custom-text-style mt-2">
       <span class="">Quick Note:</span> I am using inline templates because its
       easier to show the examples but for larger more complex projects Angular
       recommends seperating the view and styles
@@ -27,9 +27,11 @@
     </p>
   </article>
   <article class="mt-4">
-    <h4 class="custom-question-style">2. &#64;Input decorator</h4>
+    <h4 class="custom-question-style">
+      2. &#64;Input decorator - the original way.
+    </h4>
     <section>
-      <p class="text-sm text-slate-800">
+      <p class="custom-text-style">
         To do this we need to work with the parent and child component class and
         their respective templates. The steps themselves are not very complex
         but as a beginner I really struggled with this. Let's look at the steps.
@@ -82,12 +84,14 @@
     </section>
   </article>
   <article class="mt-2">
-    <h4 class="custom-question-style">3. The input function</h4>
-    <p class="text-sm text-slate-800">
+    <h4 class="custom-question-style">
+      3. The input function - the more modern way.
+    </h4>
+    <p class="custom-text-style">
       This new approach is based on signals. Signals will be discussed in detail
       later. For now, lets just see the small differences in how to use it.
     </p>
-    <ul class="text-sm text-slate-800 mt-2 flex flex-col gap-2">
+    <ul class="custom-text-style mt-2 flex flex-col gap-2">
       <li>
         <i class="fa-solid fa-circle-check"></i
         ><span class="font-medium pl-2">Differences: </span>there are
@@ -109,7 +113,7 @@
     <h4 class="custom-question-style">
       4. What else do I need to know about input communication?
     </h4>
-    <p class="text-sm text-slate-800">
+    <p class="custom-text-style">
       There are a few more interesting thing to know about using passing data
       with the input decorator/function. Let's look at some of them.
     </p>

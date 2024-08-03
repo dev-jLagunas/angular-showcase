@@ -29,3 +29,7 @@ Tailwind Custom Utility Classes
 .custom-question-style {
   @apply font-bold underline underline-offset-2 mb-2;
 }
+
+.custom-text-style {
+  @apply text-sm text-slate-800;
+}

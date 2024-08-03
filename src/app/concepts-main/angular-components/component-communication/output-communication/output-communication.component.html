@@ -1,0 +1,78 @@
+<div>
+  <header>
+    <h4 class="custom-question-style mt-4">
+      5. How do I pass data from CHILD to PARENT components?
+      <span class="text-red-500 font-bold pl-2 no-underline">New Section</span>
+    </h4>
+    <p class="custom-text-style">
+      All right let's look at how we can pass data from the child component to
+      the parent component. Just like the input we are provided with two
+      different ways to pass data, the output decorator or the output function.
+    </p>
+  </header>
+  <article class="mt-4">
+    <h4 class="custom-question-style">
+      6. &#64;Output decorator - the more traditional way.
+    </h4>
+    <section>
+      <p class="custom-text-style">
+        Just like before we have to work with both parent and child component
+        class and their respective templates. The basic premise is that the
+        output decorator alongside EventEmitter allow a child component to
+        create custom events that send data to the parent component. The parent
+        is then able to respond to actions or changes in the child.
+      </p>
+      <ul class="indent-4 mt-2 flex flex-col gap-2 text-sm">
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Class-</span> import
+          the Output decorator and EventEmitter from angular core.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Class-</span> create a
+          class property with the ouput decorator. This class property will set
+          up a new instance of the EventEmitter. Now this property can be
+          utilised to emit to the parent when something happens.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Class-</span> create a
+          method that calls the emit method on the EventEmitter instance we just
+          created. This method will trigger the event and send data to the
+          parent component whenever it is called.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Child Component Template-</span>
+          add a button that calls the method you created whenever it is clicked.
+          This will trigger the event and send data to the parent component. You
+          can also use other events, not just click, to trigger the method.
+        </li>
+        <li><app-code-block [code]="codeOutputChild"></app-code-block></li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Parent Component Class-</span> create
+          a class property in the parent. This class property will eventually
+          hold the data the will be received from the child.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Parent Component Class-</span> create
+          a method in the parent component that takes the emitted data as a
+          parameter and assigns it to the class property. This method will
+          handle the data received from the child component.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Parent Component Template-</span> add
+          the child component selector and bind the custom event to the method
+          you created. This is the setup that will call the method we just
+          created and pass the emitted data whenever the custom child event we
+          created is triggered. Now we can use the data in our parents template.
+        </li>
+        <li><app-code-block [code]="codeOutputParent"></app-code-block></li>
+      </ul>
+    </section>
+  </article>
+</div>
