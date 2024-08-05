@@ -1,4 +1,4 @@
-<div>
+<div class="mb-4">
   <header>
     <h4 class="custom-question-style mt-4">
       5. How do I pass data from CHILD to PARENT components?
@@ -22,7 +22,7 @@
         create custom events that send data to the parent component. The parent
         is then able to respond to actions or changes in the child.
       </p>
-      <ul class="indent-4 mt-2 flex flex-col gap-2 text-sm">
+      <ul class="custom-list-style">
         <li>
           <i class="fa-solid fa-circle-check"></i
           ><span class="pl-2 font-medium">Child Component Class-</span> import
@@ -73,6 +73,122 @@
         </li>
         <li><app-code-block [code]="codeOutputParent"></app-code-block></li>
       </ul>
+      <p class="custom-text-style">
+        There are a few more steps involved to accomplish this, but its not too
+        bad.
+      </p>
     </section>
+  </article>
+  <article class="mt-4">
+    <h4 class="custom-question-style">
+      7. &#64;Output function - the more modern way.
+    </h4>
+    <p class="custom-text-style">
+      According to the Angular documentation this API is currently still in
+      developer preview. The newewr API is a more simplified way of declaring
+      outputs. We no longer need to use EventEmitter thus making the syntax more
+      similar to the aforementioned input signal. It also adds better type
+      safety as the older output API does not guarantee proper type safety.
+      Lastly, please make note that this is
+      <span class="font-semibold">NOT</span> a signal. Let's see the differences
+      and how its used.
+    </p>
+    <section>
+      <p class="custom-text-style">
+        Using this new API is simpler than the more established output
+        decorator.
+      </p>
+      <ul class="custom-list-style">
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="font-medium pl-2">Differences: </span>there are
+          differences in how we define the import and how we define the class
+          member.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="font-medium pl-2">Similarities: </span> whether you use
+          the output decorator or the output function, the parent component will
+          listen to the emitted event in the same way.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="font-medium pl-2">Explanation: </span>as you can see
+          below we use lowercase output instead of Output. We use the output
+          function instead of the decorator. We no longer need to deal with
+          EventEmitter, even though, technically we are still using EventEmitter
+          under the hood.
+        </li>
+        <li><app-code-block [code]="codeOutputFunction"></app-code-block></li>
+      </ul>
+    </section>
+  </article>
+  <article class="mt-4">
+    <h4 class="custom-question-style">
+      8. What else should I know about custom events with outputs?
+    </h4>
+    <section>
+      <p class="custom-text-style">
+        Let's learn more related to these outputs for parent to child
+        communication.
+      </p>
+    </section>
+    <ul class="custom-list-style">
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Output alias: </span> the output
+        decorator allows us to specify a different name for the custom event in
+        a template. Again, it is generally recommended to avoid aliasing
+        outputs, but this feature may become useful to avoid naming collisions.
+      </li>
+      <li><app-code-block [code]="codeOuputAlias"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Ouputs in decorator: </span> It is also
+        possible to specify our outputs within the component decorator. A
+        benefit of this that you can make it explicitly clear when a component
+        inherits a property from a base class. It may also help with better
+        organization and clarity. In all the tutorials, videos, books I have
+        followed, I have not used this. From what I researched, this is reserved
+        for more advanced or complex scenarios, but please confirm for yourself.
+      </li>
+      <li><app-code-block [code]="codeOutputDecorator"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Avoid collisions: </span> this is
+        probably common knowledge but make sure you avoid using names that
+        collied with native DOM events. For example: click, change, input,
+        focus, etc...
+      </li>
+      <li><app-code-block [code]="codeOuputNaming"></app-code-block></li>
+    </ul>
+  </article>
+  <article class="mt-4">
+    <h4 class="custom-question-style">
+      9. What else should I know about the output function?
+    </h4>
+    <ul class="custom-list-style">
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Outputs as observables: </span> we can
+        use the outputFromObservable function to use RxJS observables as output
+        sources. In other words, outputs driven by observables, automatically
+        managing subscriptions and propery handling of observable destruction.
+        This could be useful for reactive programming, but according to the
+        Angular documentation most of the time using output() is sufficient.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-exclamation"></i> Observables are a very
+        complex topic that I am myself am still learning. I will have a section
+        later that goes much deeper into this topic.
+      </li>
+      <li><app-code-block [code]="codeOutputObservable"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="font-medium pl-2">Note: </span> please do read about the
+        output function, especially related to using it with observables, using
+        the links below.
+      </li>
+    </ul>
   </article>
 </div>

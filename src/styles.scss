@@ -33,3 +33,7 @@ Tailwind Custom Utility Classes
 .custom-text-style {
   @apply text-sm text-slate-800;
 }
+
+.custom-list-style {
+  @apply indent-4 mt-2 flex flex-col gap-2 text-sm text-slate-800;
+}
