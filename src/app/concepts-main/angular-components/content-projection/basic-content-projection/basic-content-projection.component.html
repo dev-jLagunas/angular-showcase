@@ -1,1 +1,78 @@
-<p>basic-content-projection works!</p>
+<div class="mt-4 w-90vw mx-auto">
+  <header>
+    <h4 class="custom-question-style mt-4">
+      1. What is content projection in Angular?
+    </h4>
+    <p class="custom-text-style">
+      Content projection allows us to
+      <span class="font-semibold">insert, or project</span>, content into a
+      component from outside that component. We can use the
+      <span class="font-semibold">ng-content directive</span>
+      for this. This directive acts as a placeholder for the projected content.
+      It works well to create reusable components as templates to dynamically
+      display different content.
+    </p>
+  </header>
+  <div class="mt-4">
+    <article>
+      <h4 class="custom-question-style">
+        2. How do we use content projection?
+      </h4>
+      <p class="custom-text-style">
+        Well, just like the input decorator and the input signal based function,
+        we use the ng-content directive to communicate from parent to child
+        component. The main difference is that we are able to include entire
+        sections of DOM (like HTML content) rather than just data. So let's see
+        a simple example, step by step, to make this easier to understand.
+      </p>
+      <section>
+        <ul class="custom-list-style">
+          <li>
+            <i class="fa-solid fa-circle-check"></i
+            ><span class="pl-2 font-medium">Child Component Class-</span> use
+            the <span class="font-semibold">ng-content</span> html tag where you
+            want the projected content to be displayed. For this first example
+            let's use only one content tag to make it more easily
+            understandable. Below we have a custom greeting component that will
+            have some custom greeting content projected into it from its parent.
+          </li>
+          <li>
+            <app-code-block [code]="codeBasicProjectionChild"></app-code-block>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i
+            ><span class="pl-2 font-medium">Parent Component Class-</span> after
+            importing the child component and using its custom selector inside
+            the parents template, we are now able to add the html content we
+            want to project.
+          </li>
+          <li>
+            <app-code-block [code]="codeBasicProjectionParent"></app-code-block>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i
+            ><span class="pl-2 font-medium">Benefits- </span> one of the biggest
+            benefits of content projection is that it allows for flexible and
+            reusable components by enabling the parent component to inject
+            custom content into specific areas of the child component's
+            template. This makes it easy to create components that can be
+            tailored to various needs without changing the component's code.
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i
+            ><span class="pl-2 font-medium">Things to note- </span> the
+            <span class="font-semibold">ng-content</span> directive works a lot
+            like the native slot element, but with more functionality specific
+            to Angular. Angular refers to content passed to a child component as
+            that component's content, which is different from its view (the
+            elements in the template). This directive is a special placeholder
+            for projected content, processed by Angular at build-time, and
+            cannot be changed at runtime. It cannot have directives, styles, or
+            attributes applied. Avoid using this directive with ngIf, ngFor, or
+            ngSwitch; use template fragments for conditional rendering instead.
+          </li>
+        </ul>
+      </section>
+    </article>
+  </div>
+</div>

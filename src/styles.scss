@@ -37,3 +37,7 @@ Tailwind Custom Utility Classes
 .custom-list-style {
   @apply indent-4 mt-2 flex flex-col gap-2 text-sm text-slate-800;
 }
+
+.desktop-set-width {
+  @apply lg:w-4/5 lg:mx-auto;
+}
