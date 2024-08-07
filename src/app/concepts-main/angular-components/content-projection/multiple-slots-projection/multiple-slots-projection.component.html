@@ -42,6 +42,20 @@
         content that did not match any selector tags.
       </li>
       <li><app-code-block [code]="codeMutipleSelectors"></app-code-block></li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">Aliasing content-</span> we are provided
+        with the special attribute
+        <span class="font-semibold">ngProjectAs</span>. This attribute lets us
+        change how an element matches the
+        <span class="font-semibold">ng-content</span> placeholder. Instead of
+        using the elements custom tag, Angular uses the
+        <span class="font-semibold">ngProjectAs</span> value to find the right
+        placeholder. This can be seen in the example below where the parent
+        component uses <span class="font-semibold">ngProjectAs</span> to match
+        the selectors in the child component
+      </li>
+      <li><app-code-block [code]="codeAliasingContent"></app-code-block></li>
     </ul>
   </article>
 </div>

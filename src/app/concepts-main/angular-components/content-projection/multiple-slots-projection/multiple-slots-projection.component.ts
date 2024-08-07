@@ -62,4 +62,23 @@ export class MultipleSlotsProjectionComponent {
     })
     export class CustomGreetingComponent {}
   `;
+
+  codeAliasingContent: string = `
+    import { Component } from '@angular/core';
+    import { CustomGreetingComponent } from './custom-greeting.component';
+
+    @Component({
+      selector: 'app-parent',
+      template: \`
+        <app-custom-greeting>
+          <div ngProjectAs="greeting-title">Hello, User!</div>
+          <div ngProjectAs="greeting-body">Welcome to our website. We hope you enjoy your visit.</div>
+          <p>This is some additional information.</p>
+        </app-custom-greeting>
+      \`,
+      standalone: true,
+      imports: [CustomGreetingComponent]
+    })
+    export class ParentComponent {}
+    `;
 }
