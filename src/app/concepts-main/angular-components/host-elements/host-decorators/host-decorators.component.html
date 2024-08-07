@@ -1,0 +1,85 @@
+<div class="mt-4 mx-auto">
+  <header>
+    <h4 class="custom-question-style mt-4">
+      3. &#64;HostBinding - what is this decorator?
+    </h4>
+    <p class="custom-text-style">
+      The HostBinding decorator is a different way to bind to the host element.
+      With it we can bind host properties and attributes to properties and
+      methods. In other words, allows you to dynamically set properties or
+      attributes on the host element based on the component's state. This can be
+      especially useful for styling or accessibility attributes that need to
+      change in response to component logic. Meaning it is a great way to
+      control the host elements properties and attributes based on the
+      components state or logic.
+    </p>
+  </header>
+  <article>
+    <p class="custom-text-style mt-2">
+      Let's see a step by step breakdown on how to use this feature and a simple
+      example.
+    </p>
+    <ul class="custom-list-style">
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">Import:</span> import the HostBinding
+        decorator from angular core.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">Create class property:</span> create a
+        class property decorated with HostBinding. This links the class property
+        to a property of the host element. It can then dynamically update the
+        host elements property based on the component state. In our example we
+        see that the HostBinding decorator binds to the host element's style
+        property, specifically the background color property, color style to the
+        component class property.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">Create method:</span> now we can create
+        a method to allow for dynamic changes based on the logic.
+      </li>
+      <li><app-code-block [code]="codeHostBinding"></app-code-block></li>
+    </ul>
+  </article>
+  <article>
+    <h4 class="custom-question-style mt-4">
+      4. &#64;HostListener - what is this decorator?
+    </h4>
+    <p class="custom-text-style">
+      The HostListener decorator is a way to listen for events on the host
+      element. With it, we can bind event handlers to events that occur on the
+      host element. In other words, HostListener allows you to define methods
+      that react to specific events, such as clicks or key presses, directly
+      within the component class. This can be particularly useful for adding
+      interactivity and responding to user actions without directly modifying
+      the template.
+    </p>
+    <ul class="custom-list-style">
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="pl-2 font-medium">Import:</span> import the HostListener
+        decorator from angular core.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="pl-2 font-medium">Create method:</span> create a method in
+        the component class that will handle the event you want to listen for.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="pl-2 font-medium">Add HostListener:</span> decorate the
+        method with HostListener, specifying the event to listen for. This links
+        the method to the event on the host element.
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="pl-2 font-medium">Handle Event:</span> within the method,
+        add the logic to handle the event. This method will be called whenever
+        the specified event occurs on the host element.
+      </li>
+      <li><app-code-block [code]="codeHostListener"></app-code-block></li>
+    </ul>
+  </article>
+</div>

@@ -1,1 +1,42 @@
-<p>host-elements works!</p>
+<div class="container-custom-settings mb-4">
+  <header>
+    <img
+      src="assets/angular-svgrepo-com.svg"
+      alt="angular-logo"
+      class="h-28 mx-auto"
+    />
+    <h2 class="text-3xl text-center font-bold mb-4">Content Projection</h2>
+  </header>
+  <section>
+    <app-host-elements-overview></app-host-elements-overview>
+  </section>
+  <section>
+    <app-host-decorators></app-host-decorators>
+  </section>
+  <section>
+    <h4 class="custom-question-style">
+      5. What is an easier way to conceptualize everything we just learned?
+    </h4>
+    <p class="custom-text-style">
+      I don't know about you but I had such a difficult time understanding the
+      purpose of these features.
+    </p>
+    <p class="custom-text-style mt-2">
+      In the simplest terms, the host property and the two decorators of
+      HostBinding and HostListener are
+      <span class="font-semibold"
+        >simply a different way of property and event binding</span
+      >
+      . In other words,
+      <span class="font-semibold"
+        >it's just another way to achieve the same results of property binding
+        or event listeners done directly in the template and class.</span
+      >
+    </p>
+    <p class="mt-2 custom-text-style">
+      The main benefit is that we can bind properties and listen for events
+      within the component class, encapsulating the logic and keeping the
+      template cleaner!
+    </p>
+  </section>
+</div>

@@ -41,3 +41,7 @@ Tailwind Custom Utility Classes
 .desktop-set-width {
   @apply lg:w-4/5 lg:mx-auto;
 }
+
+.container-custom-settings {
+  @apply w-90vw mx-auto lg:w-4/5;
+}

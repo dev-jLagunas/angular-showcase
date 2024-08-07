@@ -32,15 +32,15 @@ export class AngularComponentsComponent {
     },
     {
       id: '1-4',
-      name: 'Lifecycle Hooks',
-      description: 'Understand lifecycle hooks.',
-      borderColor: 'border-l-yellow-500',
-    },
-    {
-      id: '1-5',
       name: 'Host Elements',
       description: 'Understand how to work with host elements.',
       borderColor: 'border-l-orange-500',
+    },
+    {
+      id: '1-5',
+      name: 'Lifecycle Hooks',
+      description: 'Understand lifecycle hooks.',
+      borderColor: 'border-l-yellow-500',
     },
   ];
 

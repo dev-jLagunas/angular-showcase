@@ -1,0 +1,59 @@
+<div class="mt-4 mx-auto">
+  <header>
+    <h4 class="custom-question-style mt-4">
+      1. What are "host" elements in Angular?
+    </h4>
+    <p class="custom-text-style">
+      A host element is the actual HTML tag/element where a components template
+      is rendered. In other words a host element is nothing more than the HTML
+      tag used to display their respective components template. I am a dummy so
+      for some reason this concept was rather annoying to grasp. Don't be like
+      me, understand deeply!
+    </p>
+    <app-code-block [code]="codeHostExample"></app-code-block>
+    <p class="custom-text-style">
+      It is important to grasp this concept of host elements because they
+      provide the structure within which components function. These are the
+      encapsulated template and logic of our reusable/modular components.
+    </p>
+  </header>
+  <article>
+    <h4 class="custom-question-style mt-4">
+      2. How and why do we bind to these host elements?
+    </h4>
+    <p class="custom-text-style">
+      We can use these host elements to bind properties, attributes, and events
+      directly to the components HTML tag. This is done using the "host"
+      property in the component decorator. It's like adding functionality to the
+      HTML tag itself. What does this actually mean?
+    </p>
+    <section>
+      <ul class="custom-list-style">
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">It means-</span> we can add
+          properties, attributes, and events directly to the HTML tag inside the
+          host property of the decorator.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">It also means-</span> we are
+          configuring our component tag to behave in a certain way or have
+          specific attributes once it is used in the template.
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i
+          ><span class="pl-2 font-medium">Using "host" property-</span> using
+          the "host" property to bind to the host element is the recommended
+          method for modern Angular programming.
+        </li>
+        <li><app-code-block [code]="codeHostBinding"></app-code-block></li>
+        <li class="text-red-500 font-semibold">
+          The HostBinding and HostListener decorators explained below are mainly
+          kept for backwards compatibility as Angular recommends using the Host
+          property explained above.
+        </li>
+      </ul>
+    </section>
+  </article>
+</div>
