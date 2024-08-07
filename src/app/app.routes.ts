@@ -42,6 +42,14 @@ export const routes: Routes = [
     title: 'Content Projection',
   },
   {
+    path: 'components/:id/host-elements',
+    loadComponent: () =>
+      import(
+        './concepts-main/angular-components/host-elements/host-elements.component'
+      ).then((m) => m.HostElementsComponent),
+    title: 'Host Elements',
+  },
+  {
     path: 'components/:id/lifecycle-hooks',
     loadComponent: () =>
       import(
