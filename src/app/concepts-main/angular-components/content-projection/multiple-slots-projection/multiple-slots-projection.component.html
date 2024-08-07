@@ -1,1 +1,47 @@
-<p>multiple-slots-projection works!</p>
+<div class="mt-4 w-90vw mx-auto">
+  <header>
+    <h4 class="custom-question-style mt-4">
+      3. How do we work with multiple content placeholders?
+    </h4>
+    <p class="custom-text-style">
+      Angular allows us to project multiple different elements into different
+      <span>ng-content</span> placeholders based on a selector. Let's see how
+      this works with an example below.
+    </p>
+  </header>
+  <article>
+    <ul class="custom-list-style">
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">Child Component Class-</span> now with
+        multiple <span class="font-semibold">ng-content</span> tags we use the
+        select attritube to give them unique identifiers. Below you can see we
+        have the select attributes equal to a name that reflects the content
+        that will be projected.
+      </li>
+      <li>
+        <app-code-block [code]="codeMultipleProjections"></app-code-block>
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">Parent Component Class-</span> using the
+        same selector value we set inside the child component, we can use that
+        custom selector to add the content we want to project into the child.
+      </li>
+      <li>
+        <app-code-block [code]="codeMultipleProjectionsParent"></app-code-block>
+      </li>
+      <li>
+        <i class="fa-solid fa-circle-check"></i
+        ><span class="pl-2 font-medium">No matching selectors-</span> if the
+        child component has multiple
+        <span class="font-semibold">ng-content</span> tags with their select
+        attributes properly set, but also tags with no select attribute, the
+        <span class="italic">'plain'</span
+        ><span class="font-semibold"> ng-content</span> tag will capture all
+        content that did not match any selector tags.
+      </li>
+      <li><app-code-block [code]="codeMutipleSelectors"></app-code-block></li>
+    </ul>
+  </article>
+</div>
