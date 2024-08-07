@@ -58,6 +58,14 @@ export const routes: Routes = [
     title: 'Lifecycle Hooks',
   },
   {
+    path: 'components/:id/query-content',
+    loadComponent: () =>
+      import(
+        './concepts-main/angular-components/query-content/query-content.component'
+      ).then((m) => m.QueryContentComponent),
+    title: 'Query Content',
+  },
+  {
     path: 'directives/:id',
     loadComponent: () =>
       import(

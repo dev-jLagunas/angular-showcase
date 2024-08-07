@@ -42,6 +42,12 @@ export class AngularComponentsComponent {
       description: 'Understand lifecycle hooks.',
       borderColor: 'border-l-yellow-500',
     },
+    {
+      id: '1-6',
+      name: 'Query Content',
+      description: 'Learn about view and content queries',
+      borderColor: 'border-l-purple-500',
+    },
   ];
 
   constructor(private router: Router, private route: ActivatedRoute) {}
